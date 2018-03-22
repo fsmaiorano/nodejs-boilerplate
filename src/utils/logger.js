@@ -1,35 +1,29 @@
 const bunyan = require('bunyan');
 const path = require('path');
-
 class Logger {
 
     constructor() {
-
+        this.name = "nodejs";
     }
 
-    // type(T) {
-    //     switch(t) {
-    //         case 'info': 
-    //     }
-    // }
+    create() {
+        return new bunyan.createLogger({
+            name: this.name,
+            //     streams: [
+            //         {
+            //             type: 'rotating-file',
+            //             path: path.normalize(__dirname + '../log'),
+            //             period: '1d',   // daily rotation
+            //             count: 3        // keep 3 back copies
+            //         },
+            //         {
+            //             stream: process.stderr,
+            //             level: 'debug'
+            //         },
 
-    print(type, message) {
-        console.log(x);
+            //     ]
+        });
     }
 }
 
-// const log = bunyan.createLogger({
-//     name: 'app',
-//     streams: [
-//         {
-//             level: 'info',
-//             stream: process.stdout 
-//         },
-//         {
-//             level: 'error',
-//             stream: path.dirname(__dirname + '/log')
-//         }
-//     ]
-// });
-
-exports.Logger = Logger;
+module.exports = Logger;

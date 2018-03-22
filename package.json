@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/main.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon --watch",
     "prod": "pm2 start src/main.js --name NodeJS-Boilerplate",
     "stop-prod": "pm2 kill",
     "test": ""
