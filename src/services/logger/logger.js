@@ -1,5 +1,5 @@
 const bunyan = require('bunyan');
-const { environmentConfig } = require('../../config');
+const { environmentConfig } = require('../../configs');
 const path = require('path');
 
 class Logger {
@@ -16,7 +16,7 @@ class Logger {
             streams: [
                 {
                     type: 'rotating-file',
-                    path:  path.join(root + '/log/general.log'),
+                    path:  path.join(root + '/logs/general.log'),
                     period: '1d',   // daily rotation
                     count: 3        // keep 3 back copies
                 },
@@ -30,7 +30,7 @@ class Logger {
                 },
                 {
                     level: 'error',
-                    path:  path.join(root + '/log/error.log'),
+                    path:  path.join(root + '/logs/error.log'),
                 },
             ]
         });
