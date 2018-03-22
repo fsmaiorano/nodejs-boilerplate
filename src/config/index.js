@@ -1,7 +1,7 @@
 
-import apiConfig from './api.config';
-import serverConfig from './server.config';
-import environmentConfig from './environment.config';
+const apiConfig = require('./api.config');
+const serverConfig = require('./server.config');
+const environmentConfig = require('./environment.config');
 
 module.exports = {
     apiConfig,
