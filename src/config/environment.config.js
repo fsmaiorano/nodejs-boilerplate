@@ -1,5 +1,8 @@
 const environmentConfig = {
-    'enableLog': false,
+    logger: {
+        'enableLogs': false,
+        'pathLogs': './src/log/',
+    }
 };
 
 module.exports = environmentConfig;

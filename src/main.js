@@ -1,7 +1,7 @@
 const server = require('./server');
 const { serverConfig } = require('./config');
-const { utils } = require('./utils');
+const { services } = require('./services');
 
-const log = utils.logger;
+const log = services.logger;
 
 server.listen(serverConfig.port, () => log.info(`Server [ON] - Port: ${serverConfig.port}`));
