@@ -10,14 +10,13 @@ class Logger {
 
     create() {
         let root = path.dirname(require.main.filename);
-        root = path.join(root + '/log/general.log')
         
         return new bunyan.createLogger({
             name: this.name,
             streams: [
                 {
                     type: 'rotating-file',
-                    path: root,
+                    path:  path.join(root + '/log/general.log'),
                     period: '1d',   // daily rotation
                     count: 3        // keep 3 back copies
                 },
@@ -26,8 +25,12 @@ class Logger {
                     stream: process.stderr,
                 },
                 {
+                    level: 'debug',
                     stream: process.stderr,
-                    level: 'debug'
+                },
+                {
+                    level: 'error',
+                    path:  path.join(root + '/log/error.log'),
                 },
             ]
         });
