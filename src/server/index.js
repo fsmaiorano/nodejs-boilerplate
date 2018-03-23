@@ -10,8 +10,8 @@ server.use(cors);
 
 consign()
     .include('src/configs')
-    .include('src/routes')
-    .include('src/controllers')
+    .include('src/api/routes')
+    .include('src/api/controllers')
     .into(server);
 
 module.exports = server;

@@ -1,9 +1,9 @@
-const routes = (app) => {
+const { apiConfig } = require('../../../configs');
 
-    app.get(appSettings.routesUrl.get, (req, res) => {
-        app.src.controllers.quakeLogController.getLog(app, req, res);
+const githubRoutes = (server) => {
+    server.post(`${apiConfig.routesUrl}/github/getUser`, (req, res) => {
+        console.log(req);
     });
-
 }
 
-module.exports = route
+module.exports = githubRoutes;
