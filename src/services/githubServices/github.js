@@ -4,11 +4,11 @@ const api = axios.create({
   baseURL: 'https://api.github.com',
 });
 
-const post = async (username) => {
-  const response = await api.post(`/repos/${username}`);
-  return response;
+const getUser = async (username) => {
+  const response = await api.get(`/users/${username}`);
+  return response.data;
 }
 
 module.exports = {
-  post,
+  getUser,
 };

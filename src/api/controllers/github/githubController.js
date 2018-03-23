@@ -1,13 +1,11 @@
-const services = require('../../../services');
-
 class GithubController {
 
   constructor() {
 
   }
 
-  async post(app, req, res) {
-    const response = await app.services.githubServices.github.post(req.body.username);
+  async getUser(app, req, res) {
+    const response = await app.services.githubServices.github.getUser(req.body.username);
     let x = 1;
     let xx = 1;
     let xxx = 1;
