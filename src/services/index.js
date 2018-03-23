@@ -1,5 +1,5 @@
-const logger = require('./logger/logger');
-const github = require('./github/github');
+const logger = require('./loggerServices/logger');
+const github = require('./githubServices/github');
 
 const services = {
   logger,
