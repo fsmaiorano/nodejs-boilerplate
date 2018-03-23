@@ -1,5 +1,5 @@
-const github = require('./github');
+const GithubController = require('./github');
 
 module.exports = {
-    github
+  GithubController
 };

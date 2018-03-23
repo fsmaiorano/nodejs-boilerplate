@@ -1,9 +1,9 @@
 const logger = require('./logger/logger');
 
 const services = {
-    'logger': new logger().create(),
+  logger
 }
 
 module.exports = {
-    services
+  services
 };
