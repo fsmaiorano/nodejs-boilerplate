@@ -1,4 +1,4 @@
-const GithubController = require('./github');
+const GithubController = require('./github/githubController');
 
 module.exports = {
   GithubController

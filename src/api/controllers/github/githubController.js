@@ -1,7 +1,6 @@
 class GithubController {
 
   constructor() {
-
   }
 
   async getUser(app, req, res) {
