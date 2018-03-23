@@ -3,15 +3,15 @@ const express = require('express');
 const consign = require('consign');
 const bodyParser = require('body-parser');
 
-const server = express();
-server.use(bodyParser.urlencoded({ extended: true }));
-server.use(bodyParser.json());
-server.use(cors);
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors);
 
-consign()
-    .include('src/configs')
-    .include('src/api/routes')
-    .include('src/api/controllers')
-    .into(server);
+consign({cwd: 'src'})
+    .then('configs')
+    .then('api/controllers')
+    .then('api/routes')
+    .into(app);
 
-module.exports = server;
+module.exports = app;
