@@ -1,3 +1,5 @@
+const services = require('../../../services');
+
 class GithubController {
 
   constructor() {

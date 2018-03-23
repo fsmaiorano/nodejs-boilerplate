@@ -12,6 +12,7 @@ consign({cwd: 'src'})
     .then('configs')
     .then('api/controllers')
     .then('api/routes')
+    .then('services')
     .into(app);
 
 module.exports = app;
