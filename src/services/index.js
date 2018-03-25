@@ -1,9 +1,9 @@
 const logger = require('./loggerServices/logger');
-const github = require('./githubServices/github');
+const github_v1 = require('./githubServices/v1/github');
 
 const services = {
   logger,
-  github,
+  github_v1,
 }
 
 module.exports = {

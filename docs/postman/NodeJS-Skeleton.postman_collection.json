@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "7ea40fef-c401-41e1-9db5-cef1949e356f",
+		"name": "NodeJS-Skeleton",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/github/getuser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "1.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"fsmaiorano\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/github/getuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"github",
+						"getuser"
+					]
+				},
+				"description": "Get username details from github"
+			},
+			"response": []
+		}
+	]
+}
