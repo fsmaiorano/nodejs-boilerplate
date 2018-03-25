@@ -1,6 +1,6 @@
 const apiConfig = {
     'version': 1,
-    'routesUrl': '/api'
+    'routesUrl': '/api/'
 };
 
 module.exports = apiConfig;
