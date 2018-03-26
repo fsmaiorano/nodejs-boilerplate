@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-This project need the NodeJS installed on your machine.
+This project need of NodeJS installed on your machine.
 
 If you dont have one of these packages on your computer, follow the steps:
 
