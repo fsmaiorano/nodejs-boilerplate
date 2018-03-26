@@ -6,6 +6,7 @@ class GithubController {
 
   async getUser(app, req, res) {
     try {
+      const isValid = this.validate(app, req, res);
       const response = await this.handleVersion(app, req);
       res.send(response);
     } catch (err) {
@@ -23,6 +24,17 @@ class GithubController {
         return await app.services.githubServices.v1.github.getUser(req.body.username)
         break;
     }
+  }
+
+  validate(app, req, res) {
+    req.assert("username", "Error: Param 'username' is missing.").notEmpty();
+
+    const errors = req.validationErrors();
+
+    if (errors)
+      res.send(errors);
+
+    return true;
   }
 }
 
