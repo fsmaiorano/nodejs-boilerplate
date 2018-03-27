@@ -1,11 +1,11 @@
 {
-  "name": "nodejs-skeleton",
+  "name": "nodejs-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "./src/main.js",
   "scripts": {
     "dev": "nodemon --watch",
-    "prod": "pm2 start src/main.js --name NodeJS-Skeleton",
+    "prod": "pm2 start src/main.js --name NodeJS-Boilerplate",
     "stop-prod": "pm2 kill",
     "test": ""
   },
